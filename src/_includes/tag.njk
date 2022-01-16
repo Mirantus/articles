@@ -1,0 +1,15 @@
+{% extends "page.njk" %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ tag }}</h1>
+
+        {% for item in collections[tag] | reverse %}
+            <div>
+                <b><small>{{ item.data.date | dmy }}</small></b><br>
+                <a href="{{ item.url }}">{{ item.data.title }}</a><br>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

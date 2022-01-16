@@ -1,0 +1,22 @@
+{% extends "page.njk" %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ title }}</h1>
+
+        <p>
+            {% for tag in tags %}
+                <a href="/tag/{{ tag }}">{{ tag }}</a> &nbsp;
+            {% endfor %}
+        </p>
+
+        {{ content | safe }}
+
+        {% if date %}
+            <p>
+                <br>
+                <time datetime="{{ date | ymd }}">{{ date | dmy }}</time>
+            </p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Мои вопросы на собеседование</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+
+<div class="row">
+  <div class="one column"></div>
+  <div class="eleven columns">
+    <h2 onclick="location='/'" style="cursor: pointer">Blog</h2>
+  </div>
+</div>
+
+<hr style="margin-top: 0">
+
+
+    <div class="container">
+        <h1>Мои вопросы на собеседование</h1>
+
+        <p>
+            
+                <a href="/tag/личное">личное</a> &nbsp;
+            
+                <a href="/tag/программирование">программирование</a> &nbsp;
+            
+                <a href="/tag/собеседование">собеседование</a> &nbsp;
+            
+        </p>
+
+        <p><strong>SEO</strong><br>
+<strong>- Сколько тегов h1 может быть на странице?</strong><br></p>
+<ul>
+<li>Один, это нужно для SEO.<br>
+<br>
+<strong>HTML</strong><br>
+<strong>- Как сверстать 3 колонки?</strong><br></li>
+<li>Три дива. У первого заданы float: left и ширина. У второго float: right и ширина. У третьего margin по ширине боковых колонок.<br>
+<br></li>
+</ul>
+<p><strong>- Как сделать жирный текст на странице?</strong><br></p>
+<ul>
+<li>&lt;b&gt;<br></li>
+<li>А еще?<br></li>
+<li>&lt;strong&gt;<br></li>
+<li>А еще?<br></li>
+<li>font-weight: bold<br></li>
+<li>В чем отличие?<br></li>
+<li>Отличие в семантике.<br></li>
+</ul>
+<p><strong>CSS</strong><br>
+<strong>- Какой будет цвет у ссылки:</strong><br>
+&lt;a href=”” class=”red blue”&gt;ссылка&lt;/a&gt;<br>
+&lt;style&gt;<br>
+a.red { color: red; }<br>
+a +.blue { color: blue; }<br>
+&lt;/style&gt;<br></p>
+<ul>
+<li>Красный<br></li>
+<li>Почему?<br></li>
+<li>Второе правило вообще не применится<br></li>
+<li>А какой должен быть html, чтобы применилось?<br></li>
+<li>&lt;a href=””&gt;ссылка1&lt;/a&gt;&lt;a href=”” class=”red blue”&gt;ссылка2&lt;/a&gt;<br>
+<br>
+<strong>JS</strong><br>
+<strong>- Что будет выведено в консоли?</strong><br>
+var a = 5;<br>
+function test() {<br>
+console.log(a);<br>
+a = 2;<br>
+console.log(a);<br>
+var a = 3;<br>
+console.log(a);<br>
+}<br>
+test();<br>
+console.log(a);<br></li>
+<li>undefined, 2, 3, 5<br>
+<br>
+<strong>JQuery</strong><br>
+<strong>- Как сделать обработчик нажатия на ссылку на javascript</strong><br></li>
+<li>&lt;a onclick=”function() {}; return false;”<br>
+<strong>- А на JQuery?</strong><br></li>
+<li>&lt;a class=”js-link”&gt;&lt;/a&gt;&lt;script&gt;$(‘.js-link’).click(function() {return false;});&lt;/script&gt;<br>
+<br>
+<strong>NodeJS</strong><br>
+<strong>- Как с помощью javascript прочитать файл с диска?</strong><br></li>
+<li>В браузере можно прочитать только cookie или local storage. В node: fs.readdir().<br>
+<br>
+<strong>PHP</strong><br>
+<strong>- Есть массив $arr = [[‘id’ =&gt; ‘1’, ‘value’ =&gt; ‘one’], [‘id’ =&gt; 2, ‘value’ =&gt; ‘two’]...]. С помощью какой функции можно его отсортировать, чтобы value был по алфавиту?</strong><br></li>
+<li>array_multisort или usort<br>
+<br>
+<strong>- Как из строки 'abcdef' вытащить первые три символа?</strong><br></li>
+<li>substr('abcdef', 0, 3);<br>
+<br>
+<strong>MYSQL</strong><br>
+<strong>- Как выбрать в MySql все строки в таблице table1 с id, которых нет в таблице table2?</strong><br></li>
+<li>SELECT table1.* FROM table1 LEFT JOIN table2 ON table1.id=table2.id WHERE table2.id IS NULL;<br>
+<br>
+<strong>OOP</strong><br>
+<strong>- Что такое MVC? Где применяется?</strong><br></li>
+<li>Model - View - Controller. Применяется во фреймворках.<br>
+<br>
+<strong>Инструменты</strong><br>
+<strong>- Какие инструменты вы используете?</strong><br>
+-Jira, Bitbucket, Git, PHPStorm<br>
+<br>
+<strong>- Открыл страничку. Вместо сайта - белый экран. Ошибок нет. Как найти ошибку?</strong><br></li>
+<li>Убедиться, что url правильный. Посмотреть исходный код страницы в браузере. Проверить, что изменения во входном файле как-то влияют. Включить display_errors. Воспользоваться xdebug.<br>
+<br>
+<strong>- Что делать если страница медленно грузится?</strong><br></li>
+<li>Найти узкое место с помощью time() или xdebug. Затем попытаться оптимизировать. В крайнем случае воспользоваться кэшированием.<br>
+<br>
+<strong>Linux</strong><br>
+<strong>- Как рестартануть апач на удаленном сервере</strong><br></li>
+<li>ssh user@domain; service httpd restart<br></li>
+</ul>
+
+
+        
+            <p>
+                <br>
+                <time datetime="2016-04-03">03.04.2016</time>
+            </p>
+        
+    </div>
+
+
+</body>
+</html>
