@@ -7,7 +7,7 @@
         {% for item in collections[tag] | reverse %}
             <div>
                 <b><small>{{ item.data.date | dmy }}</small></b><br>
-                <a href="{{ item.url }}">{{ item.data.title }}</a><br>
+                <a href="{{ item.url | url }}">{{ item.data.title }}</a><br>
                 <hr>
             </div>
         {% endfor %}

@@ -4,7 +4,7 @@
     <div class="container">
         <p>
             {% for tag in collections.tagsList  %}
-                <a href="/tag/{{ tag }}">{{ tag }}</a> &nbsp;
+                <a href="{{ '/tag/' | url }}{{ tag }}">{{ tag }}</a> &nbsp;
             {% endfor %}
             <hr>
         </p>
@@ -12,7 +12,7 @@
         {% for item in collections.posts | reverse %}
             <div>
                 <b><small>{{ item.data.date | dmy }}</small></b><br>
-                <a href="{{ item.url }}">{{ item.data.title }}</a><br>
+                <a href="{{ item.url | url }}">{{ item.data.title }}</a><br>
                 <hr>
             </div>
         {% endfor %}

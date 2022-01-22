@@ -6,7 +6,7 @@
 
         <p>
             {% for tag in tags %}
-                <a href="/tag/{{ tag }}">{{ tag }}</a> &nbsp;
+                <a href="{{ '/tag/' | url }}{{ tag }}">{{ tag }}</a> &nbsp;
             {% endfor %}
         </p>
 
