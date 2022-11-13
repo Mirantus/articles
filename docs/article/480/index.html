@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Статьи - Вопросы на собеседовании по PHP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script defer src="../../js/common.js" type="module"></script>
+</head>
+
+<body>
+<header></header>
+
+<div class="container">
+    <h1>Вопросы на собеседовании по PHP</h1>
+
+    <p><b>- С чего начали изучать программирование?</b><br></p>
+    <ul>
+        <li>Си, Паскаль,Html, css, javascript, php, фреймворки<br>
+            <br>
+            <b>- Предпочтительная среда разработки?</b><br></li>
+        <li>Phpstorm - подсветка, автокомплит, контроль версий, субд<br>
+            Notepad++ - подсветка синтаксиса, снипеты, макросы<br>
+            <br>
+            <b>- Почему выбрали PHP?</b><br></li>
+        <li>PHP, потому что когда занялся веб-разработкой с удивлением узнал, что хостеры не позволяют, как правило, на своих серверах компилировать Си программы, альтернативы были PHP и Perl, глянул исходники пары гостевух на том и другом, выбрал PHP из-за схожести с Си по синтаксису и, как следствие, вероятному сокращению времени на освоение.<br>
+            <br>
+            <b>– Какими сторонними библиотеками пользовались?</b><br></li>
+        <li>Pear, GeoIP<br>
+            <br>
+            <b>– Опыт работы с различными фреймворками?</b><br></li>
+        <li>Zend Framework, Yii, Laravel, CakePHP, CodeIgniter<br>
+            <br>
+            <b>- Что нового в PHP 5.3?</b><br></li>
+        <li>Пространство имен, замыкания, константы классов<br>
+            <br>
+            <b>- Что нового в PHP 5.4?</b><br></li>
+        <li>Трейты, короткая запись массивов<br>
+            <br>
+            <b>- Что нового в PHP 5.5?</b><br></li>
+        <li>Генераторы, API хэширования паролей<br>
+            <br>
+            <b>- Что нового в PHP 5.6?</b><br></li>
+        <li>Выражения в константах, нефиксированные параметры в функциях, **<br>
+            <br>
+            <b>- Что нового в PHP 7?</b><br></li>
+        <li>Объявление типов в параметрах функций, объявление возвращаемого значения в функции, ??, &lt;=&gt;, массивы в константах, анонимные классы<br>
+            <br>
+            <b>– Типы данных в PHP?</b><br></li>
+        <li>К скалярным типам данных относятся:<br></li>
+    </ul>
+    <ul>
+        <li>целый тип (integer),<br></li>
+        <li>вещественный тип данных (float, double),<br></li>
+        <li>логический тип (boolean),<br></li>
+        <li>строковый тип (string)<br></li>
+        <li>и специальный тип NULL.<br>
+            К нескалярным типам относятся:<br></li>
+        <li>«ресурс» (resource),<br></li>
+        <li>массив (array)<br></li>
+        <li>и объект (object).<br>
+            <br>
+            <b> – Назови по памяти функции для работы с массивами, строками</b><br>
+            void echo ( string arg1 [, string argn...])<br>
+            string convert_cyr_string ( string str, string from, string to)<br>
+            array explode ( string separator, string string [, int limit])<br>
+            string htmlspecialchars ( string string [, int quote_style [, string charset]])<br>
+            string implode ( string glue, array pieces)<br>
+            string md5 ( string str [, bool raw_output])<br>
+            string nl2br ( string string)<br>
+            void printf ( string format [, mixed args])<br>
+            mixed str_replace ( mixed search, mixed replace, mixed subject [, int &amp;count])<br>
+            string str_shuffle ( string str)<br>
+            string strip_tags ( string str [, string allowable_tags])<br>
+            int strlen ( string str)<br>
+            int strpos ( string haystack, string needle [, int offset])<br>
+            string strstr ( string haystack, string needle)<br>
+            string strtolower ( string str)<br>
+            string strtoupper ( string string)<br>
+            string trim ( string str [, string charlist])<br>
+            string ucfirst ( string str)<br>
+            массив array_merge ( массив массив_1, массив массив_2 [, array ...])<br>
+            array array_unique ( array array)<br>
+            array array ( [mixed ...])<br>
+            int count ( mixed var [, int mode])<br>
+            bool in_array ( mixed needle, array haystack [, bool strict])<br>
+            void list ( mixed ...)<br>
+            void shuffle ( array array)<br>
+            <br>
+            <b> - Поменяй значение переменных A и B местами не используя третью переменную</b><br></li>
+    </ul>
+    <pre class="lang:php decode:true">&lt;?<br>
+$a += $b;<br>
+$b = $a - $b;<br>
+$a -= $b;<br>
+    <br>
+//list($b, $a) = array($a, $b);<br>
+</pre><br>
+    <p><b>- Что выведет: echo (int) ((0.1 + 0.7) * 10);</b><br></p>
+    <ul>
+        <li>7, так как ((0.1 + 0.7) * 10) = 7,999999 из-за внутреннего преобразования чисел с плавающей точкой<br>
+            <br>
+            <b>- Разница между echo и print</b><br></li>
+        <li>echo - конструкция, print - функция<br>
+            <br>
+            <b>– Что такое сериализация?</b><br></li>
+        <li>Представление данных (переменных, массивов, объектов) для их передачи (хранения)<br>
+            <br>
+            <b>- Как хранить пароли (в открытом виде или хэш)</b><br></li>
+        <li>password_hash, password_verify (php 5.5+)<br>
+            <br>
+            <b>- Чем отличается хороший код от плохого</b><br></li>
+        <li>Хороший код соблюдает code convention, Комментированный, Безопасный, Структурированный, Обрабатывает ошибки.<br>
+            <br>
+            <b>- ООП – абстракция,наследование, инкапсуляция и полиморфизм</b><br></li>
+        <li><b>Инкапсуляция</b> – это когда переменные в объекте, а доступ к ним через методы.<br>
+            <b>Полиморфизм</b> – возможность описывать разные методы, с одинаковым именем для параметров int и float, в php нормального полиморфизма нет.<br>
+            <b>Наследование</b> – копирование свойств и методов базовых классов, с возможностью их переопределения и расширения.<br>
+            <b>Абстракция</b> – создание свойств, методов, классов, которые обязательно должны переопределяться наследниками до непосредственного использования.<br>
+            <br>
+            <b>- Какие шаблоны проектирования знаешь? Расскажи в чем соль каждого?</b><br>
+            <br>
+            <b> - Что есть MVC? Какую роль выполняет каждый из составляющих элементов?</b><br></li>
+        <li>Model-view-controller (MVC, «Модель-представление-поведение», «Модель-представление-контроллер») — архитектура программного обеспечения, в которой модель данных приложения, пользовательский интерфейс и управляющая логика разделены на три отдельных компонента, так, что модификация одного из компонентов оказывает минимальное воздействие на другие компоненты. Шаблон MVC позволяет разделить данные, представление и обработку действий пользователя на три отдельных компонента<br>
+            <br>
+            <b>- Чем помогает code review - когда смотрят твой код?</b><br></li>
+        <li>синтаксические ошибки<br></li>
+        <li>convention<br></li>
+        <li>безопасность<br></li>
+        <li>полезности<br>
+            <br>
+            <b>- Сколько времени нужно на разработку гостевой книги?</b><br>
+            <b> Посетители:</b><br>
+            <b> * просмотр гостевой книге в виде ленты по 20 постов на страницу;</b><br>
+            <b> * регистрация.</b><br>
+            <b> Пользователи:</b><br>
+            <b> * авторизация,</b><br>
+            <b> * восстановление пароля,</b><br>
+            <b> * добавление постов в гостевуху.</b><br>
+            <b> Администратор:</b><br>
+            <b> * редактирование постов,</b><br>
+            <b> * добавление ответов на посты (1 пост — 1 ответ).</b><br></li>
+        <li>4 — 8 часов<br>
+            <br></li>
+        <li><b>Как реализуется ответ на посты админом (в отдельной таблице или в той же, где посты).</b><br></li>
+        <li>в отдельной - comments<br></li>
+    </ul>
+
+
+
+    <p>
+        <br>
+        <time datetime="2016-04-03">03.04.2016</time>
+    </p>
+</div>
+
+</body>
+</html>

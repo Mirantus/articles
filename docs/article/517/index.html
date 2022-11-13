@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Статьи - Lodash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script defer src="../../js/common.js" type="module"></script>
+</head>
+
+<body>
+<header></header>
+
+<div class="container">
+    <h1>Lodash</h1>
+
+    <p>Array<br />_.chunk(['a', 'b', 'c', 'd'], 3); // =&gt; [['a', 'b', 'c'], ['d']]<br />_.difference([2, 1], [2, 3]); // =&gt; [1]<br />_.findIndex([{ a: 1 }, { a: 2 }, { a: 3 }], obj =&gt; obj.a &lt; 2); // =&gt; 1<br />_.head([1, 2, 3]); // =&gt; 1<br />_.remove([1, 2, 3, 4], n =&gt; n % 2 == 0) // =&gt; [2, 4]<br />_.take([1, 2, 3], 2); // =&gt; [1, 2]<br />_.uniqBy([2.1, 1.2, 2.3], Math.floor); // =&gt; [2.1, 1.2]<br />_.zipObject(['a', 'b'], [1, 2]); // =&gt; { 'a': 1, 'b': 2 }</p>
+    <p>Collection<br />_.find([{ a: 1 }, { a: 2 }, { a: 3 }], obj =&gt; obj.a &lt; 2); // =&gt; object for '1'<br />_.partition([ { a: 1, 'active': false }, { a: 2, 'active': true }, { a: 3, 'active': false }], o =&gt; o.active); // =&gt; objects for [['1'], ['2', '3']]<br />_.reduce([1, 2], (sum, n) =&gt; sum + n, 0); // =&gt; 3<br />_.reject([ { a: 1, 'active': false }, { a: 2, 'active': true }, { a: 3, 'active': false }], o =&gt; !o.active); // =&gt; objects for ['2']<br />_.sample([1, 2, 3, 4]); // =&gt; 2 (random)<br />_.shuffle([1, 2, 3, 4]); // =&gt; [4, 1, 3, 2]<br />_.sortBy([{ a: 'a', 'active': false }, { a: 'b', 'active': true }, { a: 'c', 'active': false }], [o =&gt; o.a]); // =&gt; objects for [['a'], ['b], ['c']]</p>
+    <p>String<br />_.camelCase('Foo Bar'); // =&gt; 'fooBar'<br />_.capitalize('FRED'); // =&gt; 'Fred'<br />_.truncate('hi-diddly-ho there, neighborino', {'length': 24}); // =&gt; 'hi-diddly-ho there,...'<br />_.upperFirst('fred'); // =&gt; 'Fred'</p>
+    <p>Function<br />jQuery(window).on('resize', _.debounce(calculateLayout, 150)); // следующий вызов calculateLayout произойдет через 150мс<br />jQuery(window).on('scroll', _.throttle(updatePosition, 100)); // отложить updatePosition на 100 мс.<br /><br />Object<br />_.get({ 'a': [{ 'b': { 'c': 3 } }] }, 'a[0].b.c', default); // =&gt; 3<br />_.has({ 'a': { 'b': 2 } }, 'a.b'); // =&gt; true<br />_.hasIn({ 'a': { 'b': 2 } }, 'a.b'); // =&gt; true<br />_.mergeWith({ 'a': [1], 'b': [2] }, { 'a': [3], 'b': [4] }, (objValue, srcValue) =&gt; { if (_.isArray(objValue)) { return objValue.concat(srcValue); } }); // =&gt; { 'a': [1, 3], 'b': [2, 4] }<br />_.omit({ 'a': 1, 'b': '2', 'c': 3 }, ['a', 'c']); // =&gt; { 'b': '2' }<br />_.omitBy({ 'a': 1, 'b': '2', 'c': 3 }, _.isNumber); // =&gt; { 'b': '2' }<br />_.set({ 'a': [{ 'b': { 'c': 3 } }] }, 'a[0].b.c', 4); // =&gt; 4<br />_.unset({ 'a': [{ 'b': { 'c': 7 } }] }, 'a[0].b.c'); // =&gt; true</p>
+    <p>Util<br />_.flow([_.add, n =&gt; n^2])(1, 2); // =&gt; 9<br />_.times(3, 1); // =&gt; [1, 1, 1]<br />_.uniqueId(); // =&gt; '105'</p>
+    <p>Lang<br />_.isArray([1, 2, 3]); // =&gt; true<br />_.isBoolean(false); // =&gt; true<br />_.isEmpty([1, 2, 3]); // =&gt; false<br />_.isEqual({ 'a': 1 }, { 'a': 1 }); // =&gt; true<br />_.isFinite(3); // =&gt; true<br />_.isFunction(() =&gt; {}); // =&gt; true<br />_.isInteger(3); // =&gt; true<br />_.isNumber(3); // =&gt; true<br />_.isObject({}); // =&gt; true<br />_.isString('abc'); // =&gt; true<br />_.isUndefined(void 0); // =&gt; true</p>
+
+
+    <p>
+        <br>
+        <time datetime="2018-05-19">19.05.2018</time>
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Статьи - Установка npm-пакетов для React-приложения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script defer src="../../js/common.js" type="module"></script>
+</head>
+
+<body>
+<header></header>
+
+<div class="container">
+    <h1>Установка npm-пакетов для React-приложения</h1>
+
+    <pre>Создание проекта<br />mkdir neo.local &amp;&amp; cd neo.local<br />npm init &amp;&amp; touch .gitignore<br />touch src/index.tsx<br /><br />Установка Webpack<br />npm i -D webpack copy-webpack-plugin html-webpack-plugin cache-loader<br />npm i -D webpack-dev-server react-hot-loader @hot-loader/react-dom<br />npm i -D mini-css-extract-plugin css-loader less-loader less postcss-loader autoprefixer<br /><br />Установка TypeScript<br />npm i -D typescript ts-loader &amp;&amp; tsc --init<br /><br />Установка React<br />npm i react react-dom &amp;&amp; npm i -D @types/react @types/react-dom<br /><br />Установка React Router<br />npm i react-router &amp;&amp; npm i -D @types/react-router @types/history<br /><br />Установка Redux<br />npm i redux react-redux redux-thunk &amp;&amp; npm i -D @types/react-redux<br />npm i -D redux-devtools-extension<br /><br />Установка ESLint и Prettier<br />npm i -D @types/node<br />npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-loader eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import<br />npm i prettier &amp;&amp; npm i -D lint-staged husky<br /><br />Установка Redux Form<br />npm i redux-form &amp;&amp; npm i -D @types/redux-form<br /><br />Установка инструментов Тестирования<br />npm i -D jest ts-jest @types/jest enzyme @types/enzyme enzyme-adapter-react-16 @types/ enzyme-adapter-react-16 &amp;&amp; identity-obj-proxy &amp;&amp; npx ts-jest config:init<br />npm i -D @testing-library/dom @testing-library/jest-dom @testing-library/react @testing-library/user-event @types/testing-library__jest-dom msw whatwg-fetch</pre>
+
+
+    <p>
+        <br>
+        <time datetime="2020-11-14">14.11.2020</time>
+    </p>
+</div>
+
+</body>
+</html>
